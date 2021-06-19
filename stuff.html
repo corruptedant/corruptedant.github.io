@@ -1,12 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>stuff</h1>
-</body>
+<html lang="en-us">
+  <head>
+    <title>Home | CorruptedAnt</title>
+    <meta charset="utf-8" />
+    <meta name="Author" content="corruptedant" />
+    <meta
+      name="description"
+      content="Apparently hosting a site in github.io is ever so easy. Thanks github!"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style\css.css" />
+    <script src="script\javascript.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">corruptedant.github.io</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/stuff.html">stuff</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Disabled</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container col-xl-7">
+      <h1>My Journey on Web Development</h1>
+      <br />
+      <h2>Anicration-GUI</h2>
+      <p class="lead">
+        My first entry into web development. After being frustrated at using
+        Tkinter, I decided to choose web dev as a way to get a GUI going.
+        After a bit of researching, I found out that GUI on webapps are very
+        easy with Bootstrap.
+      </p>
+      <p class="lead">
+        However, I only knew Python at the time, so I spent some months learning
+        HTML before hopping into Django and building my first ever web app.
+      </p>
+      <img src="/static/anicration-gui.jpg" width="800" alt="" />
+      <hr />
+      <h2>vuedj_anigui</h2>
+      <p class="lead">
+        Django gave my the tools needed to create business logic, but it isn't
+        what I'm looking for. I'm looking for a Single Page Application, and
+        Django it's not exactly cut for it. I needed a page that doesn't reload
+        everytime I do something, and so starts my journey on Vue.
+      </p>
+      <p class="lead">
+        I developed the same application but this time on Vue. It's still served
+        by Django.
+      </p>
+      <img src="/static/vuedj_anigui.jpg" width="800" alt="" />
+      <p><em>It's very much unfinished. At least it now displays likes and retweets!</em></p>
+      <p class="lead">
+          This relies on django-manifest-loader to serve the production 
+          build of Vue. It's also my first foray into Javascript, as I haven't got
+          into learning Javascript yet.
+      </p>
+      <hr />
+      <h2>Segway: Seemless development between Vue and Django</h2>
+      <p class="lead">
+        This took me a lot of trail and error to get right. Initially, I wanted to quickly be
+        able to develop with the power of Vue's hot reload whilist having Django serving the file.
+        This turned out to be a step in the wrong direction. I was fumbling with webpacks and
+        django-webpack-loader it was a hell of a nightmare.
+      </p>
+      <p class="lead">
+        In the end, the right answer was not to do that. It was to separate the front end from the
+        backend. You can either do CORS/CSP, or you can use devServer:proxy on vue.config.js
+        to pass backend's port over if you plan on using Django to serve file(also SessionAuthentication).
+      </p>
+      <hr />
+      <h2>Quicktrack</h2>
+      <p class="lead">
+          This is the first Webapp that I put my full effort into. It's a hutang tracking Webapp using the
+          same techstack(Vue & Django, additionally Django REST). Hutang here means debt.
+      </p>
+      <p class="lead">
+          I needed an app to quickly track how much people owe me, so I made it. It is also the first
+          application that has real world use for me(even till this day!).
+    </p>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
